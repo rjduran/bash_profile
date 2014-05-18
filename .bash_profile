@@ -9,6 +9,7 @@ export PS1="\W$ "
 
 # listing files
 alias ls="ls -Gfh"
+alias la="ls -la"
 
 # -------------------------------------------------------------------
 
@@ -22,21 +23,34 @@ alias ~="cd ~"
 
 # locations
 PREFIX=/Users/rjduran
+CODE=/Users/rjduran/code
 
 # locations
-alias code='cd ${HOME}/code'
+alias code='cd ${CODE}'
+alias of='cd ${CODE}/of_v0.8.1_osx_release'
+alias ofios='cd ${CODE}/of_v0.8.1_ios_release'
+alias ofutils='cd ${CODE}/of_v0.8.1_osx_release/addons/ofxUtils'
+
+alias processing='cd ${CODE}/Processing'
+
+alias alloapps='open ${CODE}/AlloSystem-Apps/alloapps.xcworkspace'
+alias ofapps='open ${CODE}/openFrameworks-Apps/oFapps.xcworkspace'
+
+alias allo='cd ${CODE}/AlloSystem'
 
 # -------------------------------------------------------------------
 
 # bash utilities
-alias bash='vi ${HOME}/bash_profile/.bash_profile'									# edit .bash_profile
+alias bash='vi ${HOME}/bash_profile/.bash_profile'						# edit .bash_profile
 alias bashu='cp ${HOME}/bash_profile/.bash_profile ~/ && . ~/.bash_profile'			# copy .bash_profile & reload it
-alias bashr='. ~/.bash_profile' 													# reload .bash_profile
+alias bashr='. ~/.bash_profile' 								# reload .bash_profile
+alias bashh='compgen -a'									# display all aliases in .bash_profile
 
 # -------------------------------------------------------------------
 
 # launch applications
 alias lime='open -a /Applications/Sublime\ Text\ 2.app .'							# open sblime in current dir
+alias tunes='open /Applications/iTunes.app .'
 
 # -------------------------------------------------------------------
 
@@ -63,6 +77,7 @@ alias gd='git diff | $EDITOR'
 alias ga='git add'
 alias gl='git log'
 alias gb='git branch'
+alias gcl='git clone'
 
 # -------------------------------------------------------------------
 
@@ -70,6 +85,7 @@ alias gb='git branch'
 alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
 alias c='clear'                             # c:            Clear terminal display
 alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
+alias mkdir='mkdir -pv'
 
 # -------------------------------------------------------------------
 
@@ -78,9 +94,14 @@ alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file
 
 # Added by Canopy installer on 2014-04-04
 # VIRTUAL_ENV_DISABLE_PROMPT can be set to '' to make bashprompt show that Canopy is active, otherwise 1
-#VIRTUAL_ENV_DISABLE_PROMPT=1 source /Users/rjduran/Library/Enthought/Canopy_64bit/User/bin/activate
+VIRTUAL_ENV_DISABLE_PROMPT=1 source /Users/rjduran/Library/Enthought/Canopy_64bit/User/bin/activate
+
+# -------------------------------------------------------------------
+
+# XAMPP & hosts
+alias hosts='sudo vi /etc/hosts'
+alias vhosts='vi /Applications/XAMPP/xamppfiles/etc/extra/httpd-vhosts.conf'
 
 
-
-
+#end
 
