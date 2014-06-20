@@ -1,42 +1,30 @@
-export PS1="\W$ "
+. ~/.bash_profile		# load first
+#. ~/.bashrc
 
 # -------------------------------------------------------------------
 
-# path
-#export $PATH=""
+# env
+BASHDIR=$HOME/bash_profile
+CODE=$HOME/code
+SITES=$HOME/Sites
+APPS=/Applications
 
 # -------------------------------------------------------------------
 
-# listing files
+# aliases
 alias ls="ls -Gfh"
 alias la="ls -la"
 
-# -------------------------------------------------------------------
-
-# general shortcuts
-alias :='cd ..'
-alias ::='cd ../..'
-alias :::='cd ../../..'
-alias ~="cd ~" 
-
-# -------------------------------------------------------------------
-
-# locations
-PREFIX=/Users/rjduran
-CODE=/Users/rjduran/code
-
-# locations
 alias code='cd ${CODE}'
-alias of='cd ${CODE}/of_v0.8.1_osx_release'
-alias ofios='cd ${CODE}/of_v0.8.1_ios_release'
+alias of='cd ${CODE}/of/osx'
+alias ofios='cd ${CODE}/of/ios'
 alias ofutils='cd ${CODE}/of_v0.8.1_osx_release/addons/ofxUtils'
-
 alias processing='cd ${CODE}/Processing'
-
-alias alloapps='open ${CODE}/AlloSystem-Apps/alloapps.xcworkspace'
-alias ofapps='open ${CODE}/openFrameworks-Apps/oFapps.xcworkspace'
-
-alias allo='cd ${CODE}/AlloSystem'
+alias alloapps='open ${CODE}/alloapps/alloapps.xcworkspace'
+alias ofapps='open ${CODE}/ofapps/oFapps.xcworkspace'
+alias allo='cd ${CODE}/AlloProject'
+alias morpho='open ${CODE}/AlloProject/projects/morpho/morpho.xcodeproj'
+alias wp='cd ${SITES}/dev.wordpress'
 
 # -------------------------------------------------------------------
 
@@ -45,19 +33,17 @@ alias bash='vi ${HOME}/bash_profile/.bash_profile'						# edit .bash_profile
 alias bashu='cp ${HOME}/bash_profile/.bash_profile ~/ && . ~/.bash_profile'			# copy .bash_profile & reload it
 alias bashr='. ~/.bash_profile' 								# reload .bash_profile
 alias bashh='compgen -a'									# display all aliases in .bash_profile
+alias bashdir='cd ${HOME}/bash_profile'
+
+alias prof='vi ${HOME}/bash_profile/.profile'				# edit .profile
 
 # -------------------------------------------------------------------
 
 # launch applications
-alias lime='open -a /Applications/Sublime\ Text\ 2.app .'							# open sblime in current dir
-alias tunes='open /Applications/iTunes.app .'
-
-# -------------------------------------------------------------------
-
-# history options
-export HISTCONTROL=ignoreboth 														# don't store duplicate lines
-export HISTIGNORE="ls:ls -lah:exit:pwd:history"										# ignore these from history
-#shopt -s histappend
+alias lime='open -a ${APPS}/Sublime\ Text\ 2.app .'
+alias tunes='open ${APPS}/iTunes.app .'
+alias coda='open ${APPS}/Coda\ 2.app .'
+alias ember='open ${APPS}/Ember.app .'
 
 # -------------------------------------------------------------------
 
@@ -89,19 +75,6 @@ alias mkdir='mkdir -pv'
 
 # -------------------------------------------------------------------
 
-# rvm
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-# Added by Canopy installer on 2014-04-04
-# VIRTUAL_ENV_DISABLE_PROMPT can be set to '' to make bashprompt show that Canopy is active, otherwise 1
-VIRTUAL_ENV_DISABLE_PROMPT=1 source /Users/rjduran/Library/Enthought/Canopy_64bit/User/bin/activate
-
-# -------------------------------------------------------------------
-
 # XAMPP & hosts
 alias hosts='sudo vi /etc/hosts'
-alias vhosts='vi /Applications/XAMPP/xamppfiles/etc/extra/httpd-vhosts.conf'
-
-
-#end
-
+alias vhosts='vi ${APPS}/XAMPP/xamppfiles/etc/extra/httpd-vhosts.conf'
