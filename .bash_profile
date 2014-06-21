@@ -1,4 +1,4 @@
-. ~/.bash_profile		# load first
+. ~/.profile		# load first
 #. ~/.bashrc
 
 # -------------------------------------------------------------------
@@ -25,6 +25,10 @@ alias ofapps='open ${CODE}/ofapps/oFapps.xcworkspace'
 alias allo='cd ${CODE}/AlloProject'
 alias morpho='open ${CODE}/AlloProject/projects/morpho/morpho.xcodeproj'
 alias wp='cd ${SITES}/dev.wordpress'
+
+alias jb='cd ${CODE}/jamesbay/jbp_app'
+alias jbp='cd ${CODE}/jamesbay/jbp_app && rails s'
+
 
 # -------------------------------------------------------------------
 
